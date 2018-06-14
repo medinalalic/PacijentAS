@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bc"
+    android:layout_height="match_parent"
+    tools:context=".TerminActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/txtnaslov"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:text="Rezervacija termina"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/naslovRazlog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtnaslov"
+            android:padding="10dp"
+            android:text="Razlog posjete:"
+            android:textColor="@color/white"
+
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtrazlog"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/naslovRazlog"
+            android:layout_marginBottom="10dp"
+            android:padding="5dp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/naslovdatum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtrazlog"
+            android:padding="10dp"
+            android:text="Datum:"
+            android:textColor="@color/white"
+
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/datum"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/naslovdatum"
+            android:layout_gravity="center_horizontal|center"
+            android:layout_marginBottom="315dp"
+            android:layout_marginTop="-10dp"
+            android:background="#fff"
+            android:clickable="true"
+            android:padding="10dp"
+            android:text="Odaberi datum i vrijeme"
+            android:textAllCaps="false"
+            android:textColor="#f16f71"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+
+        <TextView
+            android:id="@+id/naslovVrijeme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/naslovdatum"
+            android:layout_toEndOf="@+id/naslovRazlog"
+            android:padding="10dp"
+            android:text="Vrijeme:"
+
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/zauzeti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="69dp"
+            android:text="Lista zauzetih termina"
+            android:textAllCaps="false"
+
+            android:layout_below="@+id/txtUsername"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_horizontal|center"
+            android:background="#fff"
+            android:textStyle="normal"
+            android:clickable="true"
+            android:textSize="18sp"
+            android:textColor="#f16f71"
+            android:padding="16dp"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:id="@+id/termin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:text="Zakaži termin"
+            android:textAllCaps="false"
+
+            android:layout_below="@+id/txtUsername"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_horizontal|center"
+            android:background="#fff"
+            android:textStyle="normal"
+            android:clickable="true"
+            android:textSize="18sp"
+            android:textColor="#f16f71"
+            android:padding="16dp"
+            android:layout_marginBottom="10dp"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_marginTop="20dp"/>
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

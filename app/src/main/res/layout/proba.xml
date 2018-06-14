@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:layout_margin="30sp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:text="Dijagram zuba"
+        android:id="@+id/naslovzuba"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:layout_below="@id/naslovzuba"
+        android:padding="10dp"
+        android:textColor="#f08b98"
+        android:text="Pacijent"
+        android:id="@+id/txtPacijent"/>
+    <RelativeLayout
+        android:id="@+id/number1"
+        android:layout_below="@id/txtPacijent"
+        android:layout_width="160dp"
+        android:layout_height="201dp"
+        android:background="#CCCCCC">
+
+        <ImageView
+            android:id="@+id/zub11"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:clickable="true"
+            android:src="@drawable/zub11" />
+
+        <ImageView
+            android:id="@+id/zub12"
+            android:layout_width="30dp"
+            android:layout_height="33dp"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/zub11"
+            android:clickable="true"
+            android:src="@drawable/zub12" />
+
+        <ImageView
+            android:id="@+id/zub13"
+            android:layout_width="31dp"
+            android:layout_height="27dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="54dp"
+            android:layout_marginTop="17dp"
+            android:clickable="true"
+            android:src="@drawable/zubic" />
+
+        <ImageView
+            android:id="@+id/zub14"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/zub12"
+            android:layout_marginEnd="11dp"
+            android:layout_marginTop="3dp"
+            android:layout_toStartOf="@+id/zub12"
+            android:clickable="true"
+            android:src="@drawable/zub" />
+
+        <ImageView
+            android:id="@+id/zub15"
+            android:layout_width="44dp"
+            android:layout_height="31dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="-2dp"
+            android:layout_marginTop="62dp"
+            android:layout_toStartOf="@+id/zub13"
+            android:clickable="true"
+            android:src="@drawable/zub" />
+
+        <ImageView
+            android:id="@+id/zub16"
+            android:layout_width="44dp"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/zub15"
+            android:layout_marginStart="19dp"
+            android:clickable="true"
+            android:src="@drawable/zub" />
+
+        <ImageView
+            android:id="@+id/zub17"
+            android:layout_width="50dp"
+            android:layout_height="36dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="39dp"
+            android:layout_marginEnd="2dp"
+            android:clickable="true"
+            android:src="@drawable/zub" />
+
+        <ImageView
+            android:id="@+id/zub18"
+            android:layout_width="42dp"
+            android:layout_height="41dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:clickable="true"
+            android:src="@drawable/zub" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/number2"
+        android:layout_width="160dp"
+        android:layout_height="201dp"
+        android:layout_below="@+id/txtPacijent"
+        android:layout_toEndOf="@+id/number1"
+        android:background="#CCCCCC">
+
+        <ImageView
+            android:id="@+id/zub21"
+            android:layout_width="37dp"
+            android:layout_height="33dp"
+            android:clickable="true"
+            android:src="@drawable/zub21" />
+
+        <ImageView
+            android:id="@+id/zub22"
+            android:layout_width="31dp"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="1dp"
+            android:clickable="true"
+            android:src="@drawable/zub22" />
+
+        <ImageView
+            android:id="@+id/zub23"
+            android:layout_width="32dp"
+            android:layout_height="27dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="53dp"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            android:src="@drawable/zubdesni" />
+
+        <ImageView
+            android:id="@+id/zub24"
+            android:layout_width="30dp"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/zub21"
+            android:layout_marginEnd="53dp"
+            android:clickable="true"
+            android:src="@drawable/zub" />
+
+        <ImageView
+            android:id="@+id/zub25"
+            android:layout_width="34dp"
+            android:layout_height="33dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="29dp"
+            android:layout_marginTop="57dp"
+            android:clickable="true"
+            android:src="@drawable/zub" />
+
+        <ImageView
+            android:id="@+id/zub26"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="-53dp"
+            android:layout_toEndOf="@+id/zub24"
+            android:clickable="true"
+            android:src="@drawable/zub" />
+
+        <ImageView
+            android:id="@+id/zub27"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/zub26"
+            android:clickable="true"
+            android:src="@drawable/zub" />
+
+        <ImageView
+            android:id="@+id/zub28"
+            android:layout_width="44dp"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="2dp"
+            android:clickable="true"
+            android:src="@drawable/zub" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/number3"
+        android:layout_width="160dp"
+        android:layout_height="201dp"
+        android:layout_below="@+id/number1"
+        android:background="#CCCCCC">
+
+        <ImageView
+            android:id="@+id/zub48"
+            android:layout_width="44dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:clickable="true"
+            android:src="@drawable/zub" />
+
+        <ImageView
+            android:id="@+id/zub47"
+            android:layout_width="43dp"
+            android:layout_height="37dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="39dp"
+            android:clickable="true"
+            android:src="@drawable/zub" />
+
+        <ImageView
+            android:id="@+id/zub46"
+            android:layout_width="47dp"
+            android:layout_height="33dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/zub47"
+            android:clickable="true"
+            android:src="@drawable/zub" />
+
+        <ImageView
+            android:id="@+id/zub45"
+            android:layout_width="35dp"
+            android:layout_height="33dp"
+            android:layout_above="@+id/zub43"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginStart="17dp"
+            android:clickable="true"
+            android:src="@drawable/zub" />
+
+        <ImageView
+            android:id="@+id/zub44"
+            android:layout_width="33dp"
+            android:layout_height="29dp"
+            android:layout_above="@+id/zub42"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="-5dp"
+            android:layout_marginStart="43dp"
+            android:clickable="true"
+            android:src="@drawable/zub" />
+
+        <ImageView
+            android:id="@+id/zub43"
+            android:layout_width="30dp"
+            android:layout_height="29dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="23dp"
+            android:clickable="true"
+            android:src="@drawable/novizub" />
+
+        <ImageView
+            android:id="@+id/zub42"
+            android:layout_width="28dp"
+            android:layout_height="33dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="11dp"
+            android:layout_marginEnd="40dp"
+            android:clickable="true"
+            android:src="@drawable/zub42" />
+
+        <ImageView
+            android:id="@+id/zub41"
+            android:layout_width="40dp"
+            android:layout_height="43dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:clickable="true"
+            android:src="@drawable/zub41" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/number4"
+        android:layout_width="160dp"
+        android:layout_height="201dp"
+        android:layout_below="@+id/number1"
+        android:layout_toRightOf="@id/number3"
+        android:background="#CCCCCC">
+
+        <ImageView
+            android:id="@+id/zub31"
+            android:layout_width="35dp"
+            android:layout_height="44dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:clickable="true"
+            android:src="@drawable/zub31" />
+
+        <ImageView
+            android:id="@+id/zub32"
+            android:layout_width="36dp"
+            android:layout_height="33dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="12dp"
+            android:layout_marginStart="27dp"
+            android:clickable="true"
+            android:src="@drawable/zub32" />
+
+        <ImageView
+            android:id="@+id/zub33"
+            android:layout_width="30dp"
+            android:layout_height="29dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="29dp"
+            android:layout_marginStart="54dp"
+            android:clickable="true"
+            android:src="@drawable/zubdesni" />
+
+        <ImageView
+            android:id="@+id/zub34"
+            android:layout_width="33dp"
+            android:layout_height="29dp"
+            android:layout_above="@+id/zub32"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="51dp"
+            android:clickable="true"
+            android:src="@drawable/zub" />
+
+        <ImageView
+            android:id="@+id/zub35"
+            android:layout_width="33dp"
+            android:layout_height="36dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="63dp"
+            android:layout_marginEnd="33dp"
+            android:clickable="true"
+            android:src="@drawable/zub" />
+
+        <ImageView
+            android:id="@+id/zub36"
+            android:layout_width="47dp"
+            android:layout_height="33dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="11dp"
+            android:layout_marginTop="66dp"
+            android:clickable="true"
+            android:src="@drawable/zub" />
+
+        <ImageView
+            android:id="@+id/zub37"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
+            android:layout_above="@+id/zub36"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="-72dp"
+            android:clickable="true"
+            android:src="@drawable/zub" />
+
+        <ImageView
+            android:id="@+id/zub38"
+            android:layout_width="42dp"
+            android:layout_height="43dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:clickable="true"
+            android:src="@drawable/zub" />
+    </RelativeLayout>
+</RelativeLayout>
+</RelativeLayout>

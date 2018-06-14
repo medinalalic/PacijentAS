@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Datum"
+        android:paddingLeft="5dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:id="@+id/txtDatum"/>
+
+
+    <TextView
+        android:id="@+id/naslovDijagnoza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="54dp"
+        android:paddingLeft="5dp"
+        android:text="Dijagnoza:"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/txtDijagnoza"
+        android:layout_width="106dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/naslovDijagnoza"
+        android:layout_marginTop="84dp"
+        android:paddingLeft="5dp"
+        android:text="Dijagnoza"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/naslovUsluga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/naslovDijagnoza"
+        android:layout_marginTop="125dp"
+        android:paddingLeft="5dp"
+        android:text="Usluga:"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/txtUsluga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/naslovDijagnoza"
+        android:layout_marginTop="161dp"
+        android:paddingRight="5dp"
+        android:text="Usluga"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/txtZub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/naslovDijagnoza"
+        android:layout_marginTop="204dp"
+        android:paddingRight="5dp"
+        android:text="Zub"
+        android:textAlignment="center"
+        android:textSize="20dp" />
+</RelativeLayout>
