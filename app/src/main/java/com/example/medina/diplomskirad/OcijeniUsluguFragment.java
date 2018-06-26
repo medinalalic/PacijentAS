@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.util.Base64;
@@ -35,6 +36,7 @@ import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 
 
 public class OcijeniUsluguFragment extends DialogFragment {
@@ -45,7 +47,11 @@ public class OcijeniUsluguFragment extends DialogFragment {
         // Required empty public constructor
     }
 
-
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setStyle(DialogFragment.STYLE_NO_FRAME, R.style.MyDialog);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -56,7 +62,7 @@ public class OcijeniUsluguFragment extends DialogFragment {
         if (args != null) {
          usluga= (UslugaVM.UslugaInfo) args.getSerializable("usluga");
             if (args.getSerializable("usluga") != null) {
-                getDialog().setTitle("Ocijeni uslugu");
+
 
                 getDialog().getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
             }
@@ -116,8 +122,8 @@ public class OcijeniUsluguFragment extends DialogFragment {
                          Calendar c = Calendar.getInstance();
                          SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                          String strDate = sdf.format(c.getTime());
-
-                         ocjena.DatumOcjenjivanja = strDate;
+Date d=new Date();
+                         ocjena.DatumOcjenjivanja = d;
 
                          ocjena.UslugaId = usluga.Id;
                          ocjena.OcjenaInt = progressValue;
@@ -126,13 +132,14 @@ public class OcijeniUsluguFragment extends DialogFragment {
                              @Override
                              public void run(OcjenaVM result) {
                                  Toast.makeText(MyApp.getContext(), "Uspješno ste ocijenili proizvod ", Toast.LENGTH_SHORT).show();
+                                 getDialog().dismiss();
                              }
                          }, ocjena);
 
                      }
                  }
 
-                 );  getDialog().dismiss();
+                 );
 
 
 

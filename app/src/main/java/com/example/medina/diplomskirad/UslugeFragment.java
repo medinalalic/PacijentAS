@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -17,6 +18,7 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -48,7 +50,7 @@ public class UslugeFragment extends Fragment {
            uslugeLV=(ListView) rootView.findViewById(R.id.listaUsluga);
        final EditText unos=(EditText) rootView.findViewById(R.id.txtPretraga);
 
-        Button pretraga=(Button) rootView.findViewById(R.id.btnPretraga);
+        ImageButton pretraga=(ImageButton) rootView.findViewById(R.id.btnPretraga);
 
             UslugaApi.getAllUsluge(getContext(),
                     new MyRunnable<JSONArray>() {
@@ -89,8 +91,14 @@ public class UslugeFragment extends Fragment {
 
                                         TextView nazivP = (TextView) view.findViewById(R.id.nazivUsluge);
                                         ImageView slika = (ImageView) view.findViewById(R.id.uslugaImage);
+                                        TextView ocjena = (TextView) view.findViewById(R.id.ocjenaInt);
+                                        if(p.Ocjena!=0) {
 
-
+                                            ocjena.setText(String.valueOf(p.Ocjena));
+                                        }
+                                        if(p.Ocjena==0) {
+                                            ocjena.setText("0");
+                                        }
                                         nazivP.setText(p.Vrsta);
 
                                         byte[] decodedBytes = Base64.decode(p.Slika, Base64.DEFAULT);
@@ -145,7 +153,14 @@ public class UslugeFragment extends Fragment {
 
                                               TextView nazivP = (TextView) view.findViewById(R.id.nazivUsluge);
                                               ImageView slika = (ImageView) view.findViewById(R.id.uslugaImage);
+                                              TextView ocjena = (TextView) view.findViewById(R.id.ocjenaInt);
+                                              if(p.Ocjena!=0) {
 
+                                                  ocjena.setText(String.valueOf(p.Ocjena));
+                                              }
+                                              if(p.Ocjena==0) {
+                                                  ocjena.setText("0");
+                                              }
 
                                               nazivP.setText(p.Vrsta);
 
@@ -200,7 +215,14 @@ public class UslugeFragment extends Fragment {
 
                                               TextView nazivP = (TextView) view.findViewById(R.id.nazivUsluge);
                                               ImageView slika = (ImageView) view.findViewById(R.id.uslugaImage);
+                                              TextView ocjena = (TextView) view.findViewById(R.id.ocjenaInt);
+                                              if(p.Ocjena!=0) {
 
+                                                  ocjena.setText(String.valueOf(p.Ocjena));
+                                              }
+                                              if(p.Ocjena==0) {
+                                                  ocjena.setText("0");
+                                              }
 
                                               nazivP.setText(p.Vrsta);
 

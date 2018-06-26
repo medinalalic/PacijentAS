@@ -78,7 +78,8 @@ public class UslugaApi {
 
                 items.add(new UslugaVM.UslugaInfo(jsonObj.getJSONObject(i).getInt("Id"),
                         jsonObj.getJSONObject(i).getString("Vrsta"),
-                        jsonObj.getJSONObject(i).get("Slika").toString()));
+                        jsonObj.getJSONObject(i).get("Slika").toString(),
+                        jsonObj.getJSONObject(i).getInt("Ocjena")));
 
             }
 
@@ -130,7 +131,8 @@ public class UslugaApi {
 
                 items.add(new UslugaVM.UslugaInfo(jsonObj.getJSONObject(i).getInt("Id"),
                         jsonObj.getJSONObject(i).getString("Vrsta"),
-                        jsonObj.getJSONObject(i).get("Slika").toString()));
+                        jsonObj.getJSONObject(i).get("Slika").toString(),
+                        jsonObj.getJSONObject(i).getInt("Ocjena")));
 
             }
 
@@ -149,12 +151,14 @@ public class UslugaApi {
 
     public static void postOcjena(final Context context, final MyRunnable <OcjenaVM> onSuccess, OcjenaVM ocjena) {
 
-        final String url = Config.urlApi + "Ocjena/";
+        final String url = Config.urlApi + "Ocjena/PostOcjena/";
+
 
 
         MyVolley.post(url, OcjenaVM.class, new Response.Listener < OcjenaVM > () {
             @Override
             public void onResponse(OcjenaVM response) {
+
                 onSuccess.run(response);
 
 
@@ -162,6 +166,7 @@ public class UslugaApi {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+
                 Toast.makeText(MyApp.getContext(), "Greška u komunikaciji sa serverom : " + error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         }, ocjena);

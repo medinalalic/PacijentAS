@@ -23,6 +23,7 @@ import com.example.medina.diplomskirad.Api.ZubApi;
 import com.example.medina.diplomskirad.Helper.Global;
 import com.example.medina.diplomskirad.Helper.MyRunnable;
 import com.example.medina.diplomskirad.Helper.Sesija;
+import com.example.medina.diplomskirad.Model.KorisniciVM;
 import com.example.medina.diplomskirad.Model.PacijentVM;
 import com.example.medina.diplomskirad.Model.PorukaVM;
 import com.example.medina.diplomskirad.Model.ZubVM;
@@ -46,10 +47,21 @@ Button profil;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_uredi_profil);
         profil=(Button)findViewById(R.id.btnProfil);
+        final Intent intent = this.getIntent();
         profil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(UrediProfilActivity.this, ProfilActivity.class));
+                Intent i= new Intent(UrediProfilActivity.this, ProfilActivity.class);
+                final Bundle bundle = intent.getExtras();
+                if(bundle !=null) {
+                    KorisniciVM k2 = (KorisniciVM) bundle.getSerializable("korisnik2");
+                    Bundle arg=new Bundle();
+                    arg.putSerializable("korisnik2",k2);
+                    i.putExtras(arg);
+                }
+
+                startActivity(i);
+
 
             }
         });

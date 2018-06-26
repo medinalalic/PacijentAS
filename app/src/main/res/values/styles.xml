@@ -18,4 +18,17 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#CDE7F0</item>
+        <item name="colorControlActivated">#89D2D8</item>
+    </style>
+
+    <style name="SeekBarColor"
+        parent="Theme.AppCompat">
+        <item name="colorAccent">@color/black</item>
+    </style>
+
+    <style name="MyDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/white</item>
+    </style>
 </resources>

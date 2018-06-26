@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
@@ -7,281 +8,345 @@
     android:layout_height="match_parent"
     android:paddingLeft="18dp"
     android:paddingRight="18dp"
-    android:background="@drawable/bc"
-    tools:context=".RegistracijaActivity">
-    <ScrollView
+    android:background="#CDE7F0"
+    tools:context=".ProfilActivity">
+
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
 
-        <LinearLayout
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
+
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/txtRegNaslov"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Uredi podatke"
-                android:padding="10dp"
-                android:layout_centerHorizontal="true"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:layout_gravity="center_horizontal"
-                android:textColor="@color/white"
-                android:layout_marginBottom="10dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/naslovPrezime"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/txtRegNaslov"
-                android:text="Prezime:"
-                android:padding="10dp"
-                android:textSize="15dp"
-                android:textColor="@color/white"
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#89D2D8"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                android:textStyle="bold" />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtPrezime"
-                android:layout_below="@id/naslovPrezime"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
- android:padding="12dp"
-                android:layout_marginBottom="5dp"
-                android:ems="10"
-                android:background="@android:color/transparent"
-                android:drawablePadding="12dp"
-                android:textColorHint="#fff"
-                android:drawableLeft="@drawable/ic_person_white_24dp"/>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#f9d7db" />
-            <TextView
-                android:id="@+id/naslovIme"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/txtPrezime"
-                android:text="Ime:"
-                android:padding="10dp"
-                android:textSize="15dp"
-                android:textColor="@color/white"
-                android:textStyle="bold" />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtIme"
-                android:layout_below="@+id/naslovIme"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/circle"
+                        android:padding="10dp"
+                        android:src="@drawable/img_register"
+                        android:tint="@color/white" />
 
-                android:padding="12dp"
-                android:layout_marginBottom="5dp"
-                android:ems="10"
-                android:background="@android:color/transparent"
-                android:drawablePadding="12dp"
-                android:textColorHint="#fff"
-                android:drawableLeft="@drawable/ic_person_white_24dp"/>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#f9d7db" />
-            <TextView
-                android:id="@+id/naslovEmail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/txtIme"
-                android:text="Email:"
-                android:padding="10dp"
-                android:textSize="15dp"
-                android:textColor="@color/white"
-                android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/txtRegNaslov"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="UREDI PODATKE"
+                        android:textColor="@color/white"
+                        android:textSize="22sp" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtEmail"
-                android:layout_below="@+id/naslovEmail"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
+                </LinearLayout>
 
-                android:padding="12dp"
-                android:layout_marginBottom="5dp"
-                android:ems="10"
-                android:background="@android:color/transparent"
-                android:drawablePadding="12dp"
-                android:textColorHint="#fff"
-                android:drawableLeft="@drawable/ic_email_black_24dp"/>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#f9d7db" />
-            <TextView
-                android:id="@+id/naslovAdresa"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/txtEmail"
-                android:text="Adresa:"
-                android:padding="10dp"
-                android:textSize="15dp"
-                android:textColor="@color/white"
-                android:textStyle="bold" />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:ems="10"
-                android:id="@+id/txtAdresa"
-                android:textSize="18sp"
-                android:layout_below="@+id/naslovAdresa"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/linearLayout1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="-10dp"
+                    android:rotation="45"
+                    android:src="@drawable/square" />
 
-                android:padding="12dp"
-                android:layout_marginBottom="5dp"
-                android:background="@android:color/transparent"
-                android:drawablePadding="12dp"
-                android:textColorHint="#fff"
-                android:drawableLeft="@drawable/ic_location_on_black_24dp"/>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#f9d7db" />
-            <TextView
-                android:id="@+id/naslovTelefon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/txtAdresa"
-                android:text="Telefon:"
-                android:padding="10dp"
-                android:textSize="15dp"
-                android:textColor="@color/white"
-                android:textStyle="bold" />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:ems="10"
-                android:layout_below="@+id/naslovTelefon"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:id="@+id/txtTelefon"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
+                <RelativeLayout
+                    android:id="@+id/relativeLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView1"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="30dp">
 
-                android:textSize="18sp"
+                    <ImageView
+                        android:id="@+id/imgView_userIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="#89D2D8"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_person_white_24dp"
+                        android:tint="@color/white" />
 
-                android:padding="12dp"
-                android:layout_marginBottom="5dp"
-                android:background="@android:color/transparent"
-                android:drawablePadding="12dp"
-                android:textColorHint="#fff"
-                android:drawableLeft="@drawable/ic_call_black_24dp"/>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#f9d7db" />
-            <TextView
-                android:id="@+id/naslovPass"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/txtTelefon"
-                android:text="Password:"
-                android:padding="10dp"
-                android:textSize="15dp"
-                android:textColor="@color/white"
-                android:textStyle="bold" />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtPassword"
-                android:inputType="numberPassword"
-                android:layout_marginTop="20dp"
-                android:layout_below="@+id/naslovPass"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
+                    <EditText
+                        android:id="@+id/txtPrezime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/imgView_userIcon"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/imgView_userIcon"
+                        android:background="#CDE7F0"
+                        android:hint="Prezime"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="8dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="15sp" />
 
-                android:padding="12dp"
-                android:hint="Unesite username"
-                android:layout_marginBottom="5dp"
-                android:ems="10"
-                android:background="@android:color/transparent"
-                android:drawablePadding="12dp"
-                android:textColorHint="#fff"
-                android:drawableLeft="@drawable/ic_lock_white_24dp"/>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#f9d7db" />
-            <TextView
-                android:id="@+id/naslovUser"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/txtPassword"
-                android:text="Username:"
-                android:padding="10dp"
-                android:textSize="15dp"
-                android:textColor="@color/white"
-                android:textStyle="bold" />
+                </RelativeLayout>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtUsername"
-                android:padding="12dp"
-                android:layout_below="@+id/naslovUser"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
 
-                android:layout_marginBottom="5dp"
-                android:ems="10"
-                android:background="@android:color/transparent"
-                android:drawablePadding="12dp"
-                android:textColorHint="#fff"
-                android:drawableLeft="@drawable/ic_person_white_24dp"/>
+                <RelativeLayout
+                    android:id="@+id/relativeLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout1"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="15dp">
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#f9d7db" />
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Spasi promjene"
-                android:layout_below="@+id/txtUsername"
-                android:id="@+id/btnRegistracija"
-                android:textAllCaps="false"
+                    <ImageView
+                        android:id="@+id/imgView_passwordIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="#89D2D8"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_person_white_24dp"
+                        android:tint="@color/white" />
 
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_gravity="center_horizontal|center"
-                android:background="#fff"
-                android:textStyle="normal"
-                android:clickable="true"
-                android:textSize="18sp"
-                android:textColor="#f16f71"
-                android:padding="16dp"
-                android:layout_marginBottom="10dp"
-                style="@style/TextAppearance.AppCompat.Body1"
-                android:layout_marginTop="20dp"/>
-        </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+                    <EditText
+                        android:id="@+id/txtIme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/imgView_passwordIcon"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/imgView_passwordIcon"
+                        android:background="#CDE7F0"
+                        android:hint="Ime"
+
+                        android:inputType="textPersonName"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="8dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout2"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:id="@+id/imgView_repasswordIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="#89D2D8"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_email_black_24dp"
+                        android:tint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/txtEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/imgView_repasswordIcon"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/imgView_repasswordIcon"
+                        android:background="#CDE7F0"
+
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="8dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout3"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:id="@+id/imgView_emailIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="#89D2D8"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_lock_white_24dp"
+                        android:tint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/txtPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/imgView_emailIcon"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/imgView_emailIcon"
+                        android:background="#CDE7F0"
+                        android:hint="Password"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="8dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout4"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:id="@+id/imgView_user"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="#89D2D8"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_person_white_24dp"
+                        android:tint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/txtUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/imgView_user"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/imgView_user"
+                        android:background="#CDE7F0"
+                        android:hint="Username"
+
+                        android:paddingLeft="20dp"
+                        android:paddingTop="8dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout5"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:id="@+id/imgView_address"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="#89D2D8"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_location_on_black_24dp"
+                        android:tint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/txtAdresa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/imgView_address"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/imgView_address"
+                        android:background="#CDE7F0"
+                        android:hint="Adresa"
+
+                        android:paddingLeft="20dp"
+                        android:paddingTop="8dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout6"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:id="@+id/imgView_mob"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="#89D2D8"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_call_black_24dp"
+                        android:tint="@color/white" />
+
+                    <EditText
+                        android:id="@+id/txtTelefon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/imgView_mob"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/imgView_mob"
+                        android:background="#CDE7F0"
+                        android:hint="Mobitel"
+
+                        android:paddingLeft="20dp"
+                        android:paddingTop="8dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btnRegistracija"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout7"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#89D2D8"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="SPASI PROMJENE"
+                    android:textColor="@color/white" />
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
+
+
+
+
+
+

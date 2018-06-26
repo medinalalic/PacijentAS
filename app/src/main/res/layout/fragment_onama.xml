@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bc"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
     tools:context=".OnamaFragment">
     <FrameLayout
         android:layout_width="match_parent"
@@ -20,38 +21,80 @@
                 <ImageView
                     android:id="@+id/slika"
                     android:layout_width="match_parent"
-                    android:layout_height="183dp"
-                    android:src="@drawable/f" />
+                    android:layout_height="171dp"
+                    android:src="@drawable/mala" />
 
                 <LinearLayout
                     android:id="@+id/linlayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/slika"
-                    android:paddingBottom="15dp"
-                    android:paddingLeft="10dp"
+                    android:background="#CDE7F0"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
                     android:paddingRight="10dp"
-                    android:paddingTop="20dp">
+                    android:paddingTop="10dp">
+
                     <me.biubiubiu.justifytext.library.JustifyTextView
                         android:id="@+id/text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Na prvom mjestu uvijek nam je pacijent i njegovi zahtjevi. Garantujemo Vam brz, bezbolan i siguran put do Vašeg savršenog osmijeha. U ugodnom i suvremeno opremljenom prostoru naše ordinacije omogućili smo pacijentima obavljanje većine stomatoloških zahvata. Očekujemo Vas!
-                  "
-                        android:textColor="@color/white"
-                        android:textSize="15dp"
+                        android:layout_marginBottom="5dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
-                        />
+                        android:text="U savremenom i prijatnom ambijentu, uz najnovija saznanja i posljednja dostignuća tehnike, vodimo računa da Vam svo vrijeme tretmana bude što ugodnije i da uz našu pomoć savladate strah od stomatoloških intervencija.Obratite nam se!
+"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
 
                 </LinearLayout>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card"
+                    android:layout_width="300dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/linlayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="-12dp"
+                    android:background="#89D2D8"
+                    app:cardPreventCornerOverlap="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <ImageView
+                            android:layout_width="92dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/slikaa" />
+
+                        <ImageView
+                            android:layout_width="109dp"
+                            android:layout_height="97dp"
+                            android:src="@drawable/slika" />
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/slikaaa" />
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
 
                 <LinearLayout
                     android:id="@+id/lay"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/linlayout"
+                    android:layout_height="166dp"
+                    android:layout_below="@+id/card"
                     android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -63,7 +106,7 @@
                         <ImageView
                             android:layout_width="36dp"
                             android:layout_height="36dp"
-                            android:src="@drawable/location" />
+                            android:src="@drawable/ic_location_on_black_24dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -71,8 +114,7 @@
                             android:layout_gravity="center_vertical"
                             android:paddingLeft="20dp"
                             android:text="Ulica Braće Lakišića"
-                            android:textColor="@color/white"
-
+                            android:textColor="@color/black"
                             android:textStyle="bold" />
                     </LinearLayout>
 
@@ -87,7 +129,7 @@
                         <ImageView
                             android:layout_width="36dp"
                             android:layout_height="36dp"
-                            android:src="@drawable/images" />
+                            android:src="@drawable/ic_call_black_24dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -95,7 +137,7 @@
                             android:layout_gravity="center_vertical"
                             android:paddingLeft="20dp"
                             android:text="036 550 332"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
 
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -111,7 +153,7 @@
                         <ImageView
                             android:layout_width="36dp"
                             android:layout_height="36dp"
-                            android:src="@drawable/sat" />
+                            android:src="@drawable/ic_access_time_black_24dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -119,7 +161,7 @@
                             android:layout_gravity="center_vertical"
                             android:paddingLeft="20dp"
                             android:text="09:00 h - 17:00 h"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
 
                             android:textStyle="bold" />
 
@@ -128,29 +170,31 @@
                 </LinearLayout>
 
 
-                <Button
-                    android:id="@+id/btnUsluge"
-                    style="@style/TextAppearance.AppCompat.Body1"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/lay"
-                    android:clickable="true"
-                    android:layout_alignParentBottom="true"
-                    android:padding="16dp"
-                    android:text="Usluge ordinacije"
-                    android:textAllCaps="false"
-                    android:textSize="18sp"
-                    android:textStyle="normal"
+                    android:layout_height="120dp"
+                    android:layout_below="@id/lay"
+                    android:background="@drawable/ccc">
 
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_gravity="center_horizontal|center"
-                    android:background="#fff"
-                    android:textColor="#f16f71"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="20dp"/>
+                    <Button
+                        android:id="@+id/btnUsluge"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="28dp"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:padding="16dp"
+                        android:text="Usluge ordinacije"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+                </RelativeLayout>
+
             </RelativeLayout></ScrollView>
     </FrameLayout>
 

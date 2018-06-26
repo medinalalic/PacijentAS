@@ -1,40 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:background="@drawable/bc"
+    android:background="#CDE7F0"
 
     android:layout_height="match_parent"
     >
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="30sp">
-        <TextView
+        android:layout_margin="20sp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:textSize="30dp"
-            android:padding="10dp"
-            android:textColor="@color/white"
-            android:text="Dijagram zuba"
-            android:id="@+id/naslovzuba"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:textSize="25dp"
-            android:layout_below="@id/naslovzuba"
-            android:padding="10dp"
-            android:textColor="@color/white"
-            android:text="Pacijent"
-            android:id="@+id/txtPacijent"/>
+            android:background="#89D2D8"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtRegNaslov"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="DIJAGRAM ZUBA"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/txtPacijent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/naslovzuba"
+                android:padding="8dp"
+                android:text="Pacijent"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/linearLayout1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-10dp"
+            android:rotation="45"
+            android:src="@drawable/square" />
+
 
         <RelativeLayout
             android:id="@+id/number1"
             android:layout_width="165dp"
             android:layout_height="201dp"
-            android:layout_below="@id/txtPacijent"
-            >
+            android:layout_below="@id/imageView1"
+            android:layout_marginTop="20dp">
 
             <ImageView
                 android:id="@+id/zub11"
@@ -121,7 +144,9 @@
             android:id="@+id/number2"
             android:layout_width="160dp"
             android:layout_height="201dp"
-            android:layout_below="@+id/txtPacijent"
+            android:layout_below="@+id/imageView1"
+
+            android:layout_marginTop="20dp"
             android:layout_toEndOf="@+id/number1">
 
             <ImageView
@@ -208,8 +233,7 @@
             android:id="@+id/number3"
             android:layout_width="168dp"
             android:layout_height="201dp"
-            android:layout_below="@+id/number1"
-            >
+            android:layout_below="@+id/number1">
 
             <ImageView
                 android:id="@+id/zub48"
@@ -298,8 +322,7 @@
             android:layout_width="156dp"
             android:layout_height="201dp"
             android:layout_below="@+id/number1"
-            android:layout_toRightOf="@id/number3"
-           >
+            android:layout_toRightOf="@id/number3">
 
             <ImageView
                 android:id="@+id/zub31"

@@ -21,6 +21,7 @@ import com.example.medina.diplomskirad.Api.TerminApi;
 import com.example.medina.diplomskirad.Helper.F;
 import com.example.medina.diplomskirad.Helper.MyRunnable;
 import com.example.medina.diplomskirad.Helper.Sesija;
+import com.example.medina.diplomskirad.Model.KorisniciVM;
 
 import java.util.Date;
 
@@ -108,10 +109,22 @@ ImageView odjava;
 
             }
         });
+        Intent intent = this.getIntent();
+        final Bundle bundle = intent.getExtras();
         profil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MeniActivity.this, UrediProfilActivity.class));
+                Intent i= new Intent(MeniActivity.this, UrediProfilActivity.class);
+                if(bundle!=null) {
+                    KorisniciVM k = (KorisniciVM) bundle.getSerializable("korisnik");
+                    Bundle arg=new Bundle();
+                    arg.putSerializable("korisnik2",k);
+                    i.putExtras(arg);
+                    startActivity(i);
+                }
+                else{
+                    startActivity(i);
+                }
 
             }
         });

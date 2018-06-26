@@ -66,26 +66,25 @@
                 android:background="#f9d7db" />
 
 
-
             <Button
+                android:id="@+id/btnLogin"
+                style="@style/TextAppearance.AppCompat.Body1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
                 android:background="#fff"
-                android:id="@+id/btnLogin"
+                android:clickable="true"
+                android:padding="16dp"
                 android:text="Prijavi se"
                 android:textAllCaps="false"
-                android:textStyle="normal"
-                android:clickable="true"
+                android:textColor="#89D2D8"
                 android:textSize="18sp"
-                android:textColor="#f16f71"
-                android:padding="16dp"
-                style="@style/TextAppearance.AppCompat.Body1"
-                android:layout_marginTop="32dp"/>
+                android:textStyle="normal" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#f08b98"
+                android:background="#89D2D8"
                 android:text="Registracija"
                 android:id="@+id/btnRegistracija"
                 android:textAllCaps="false"
